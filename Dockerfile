@@ -14,6 +14,7 @@ ENV PHP_TIMEZONE UTC
 
 COPY root /
 RUN /bin/bash /build-setup.sh
+COPY plugins/* /var/www/html/lib/plugins/
 
 VOLUME /storage
 EXPOSE 8080
